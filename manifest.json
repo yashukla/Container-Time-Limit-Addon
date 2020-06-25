@@ -1,0 +1,32 @@
+{
+
+  "manifest_version": 2,
+  "name": "Container Time Limit",
+  "version": "1.0.4",
+
+  "description": "Simple Firefox addon to allow for time restrictions on usage of specific containers.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "contextualIdentities",
+    "cookies",
+    "management",
+    "tabs",
+    "webRequestBlocking",
+    "webRequest"
+  ],
+
+  "incognito": "not_allowed", 
+
+  "content_scripts": [
+    {
+      "matches": [ "*" ],
+      "js": [ "time-limit.js" ]
+    }
+  ]
+
+}
